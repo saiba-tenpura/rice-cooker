@@ -1,0 +1,28 @@
+{
+    "/dev/vda": {
+        "partitions": [
+            {
+                "boot": true,
+                "filesystem": {
+                    "format": "fat32"
+                },
+                "mountpoint": "/boot",
+                "size": "512MiB",
+                "start": "1MiB",
+                "type": "primary",
+                "wipe": true
+            },
+            {
+                "filesystem": {
+                    "format": "ext4"
+                },
+                "mountpoint": "/",
+                "size": "95%",
+                "start": "513MiB",
+                "type": "primary",
+                "wipe": true
+            }
+        ],
+        "wipe": true
+    }
+}
