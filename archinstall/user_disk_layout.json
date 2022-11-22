@@ -17,7 +17,7 @@
                     "format": "ext4"
                 },
                 "mountpoint": "/",
-                "size": "95%",
+                "size": "100%",
                 "start": "513MiB",
                 "type": "primary",
                 "wipe": true
