@@ -3,6 +3,7 @@
         "partitions": [
             {
                 "boot": true,
+                "encrypted": false,
                 "filesystem": {
                     "format": "fat32"
                 },
@@ -13,8 +14,10 @@
                 "wipe": true
             },
             {
+                "encrypted": false,
                 "filesystem": {
-                    "format": "ext4"
+                    "format": "ext4",
+                    "mount_options": []
                 },
                 "mountpoint": "/",
                 "size": "100%",

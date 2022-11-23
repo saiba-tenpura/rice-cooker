@@ -4,10 +4,12 @@
     ],
     "archinstall-language": "English",
     "audio": "pipewire",
-    "bootloader": "grub-install",
+    "bootloader": "systemd-bootctl",
     "config_version": "2.5.1",
-    "custom_commands": [
-        "./install.sh -p"
+    "custom-commands": [
+        "curl -sO https://raw.githubusercontent.com/saiba-tenpura/rice-cooker/main/post-install.sh",
+        "chmod 744 post-install.sh",
+        "./post-install.sh"
     ],
     "debug": false,
     "desktop-environment": "i3",
