@@ -123,7 +123,10 @@
         "git",
         "i3-gaps",
         "neovim",
-        "picom"
+        "picom",
+        "polybar",
+        "python-pywal",
+        "rxvt-unicode"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
