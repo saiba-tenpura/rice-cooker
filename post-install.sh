@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-# Install AUR helper & AUR packages
-install_aur() {
-    # Usage: install_aur <user> <aur_pkgs>
+install_yay() {
+    # Usage: install_yay <user> <aur_pkgs>
 	su - "${1}" <<-EOF
 	git clone https://aur.archlinux.org/yay.git ~/yay
 	(cd ~/yay; makepkg --noconfirm -si > /dev/null 2>&1; rm -rf ~/yay)
@@ -10,8 +9,8 @@ install_aur() {
 	EOF
 }
 
-autologin() {
-    # Usage: autologin <user>
+setup_autologin() {
+    # Usage: setup_autologin <user>
     mkdir -p /etc/systemd/system/getty@tty1.service.d
 	cat <<-EOF > /etc/systemd/system/getty@tty1.service.d/override.conf
 	[Service]
@@ -20,8 +19,8 @@ autologin() {
 	EOF
 }
 
-dotfiles() {
-    # Usage: dotfiles <user> <dotfiles_repo>
+setup_dotfiles() {
+    # Usage: setup_dotfiles <user> <dotfiles_repo>
 	su - "${1}" <<-EOF
 	curl -sO "${2/github/raw.githubusercontent}/master/install.sh"
 	chmod 744 install.sh
@@ -32,10 +31,10 @@ dotfiles() {
 main() {
     user="saiba"
     dotfiles_repo="https://github.com/saiba-tenpura/dotfiles"
-    aur_pkgs="betterlockscreen"
-    install_aur $user $aur_pkgs
-    autologin $user
-    dotfiles $user $dotfiles_repo
+    aur_pkgs="betterlockscreen ttf-icomoon-feather"
+    install_yay $user $aur_pkgs
+    setup_autologin $user
+    setup_dotfiles $user $dotfiles_repo
 }
 
 main
