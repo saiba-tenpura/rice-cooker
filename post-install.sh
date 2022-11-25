@@ -28,6 +28,21 @@ setup_dotfiles() {
 	EOF
 }
 
+setup_network() {
+    systemctl enable dhcpcd > /dev/null
+}
+
+setup_user_configs() {
+    # Generate Pywal cache for current wallpaper
+    wal -i ~/wallpaper/current
+
+    # Install vim-plug for Neovim
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+    # Install Neovim Plugins
+    nvim --headless +PlugInstall +qall
+}
+
 main() {
     user="saiba"
     dotfiles_repo="https://github.com/saiba-tenpura/dotfiles"
@@ -35,6 +50,10 @@ main() {
     install_yay $user $aur_pkgs
     setup_autologin $user
     setup_dotfiles $user $dotfiles_repo
+    setup_network
+
+    export -f setup_user_configs
+    su $user -c "bash setup_user_configs"
 }
 
 main
