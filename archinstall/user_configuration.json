@@ -129,7 +129,8 @@
         "python-pywal",
         "rofi",
         "rxvt-unicode",
-        "ttc-iosevka"
+        "ttc-iosevka",
+        "xorg-xset"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"

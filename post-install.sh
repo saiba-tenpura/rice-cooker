@@ -33,14 +33,20 @@ setup_network() {
 }
 
 setup_user_configs() {
-    # Generate Pywal cache for current wallpaper
-    wal -i ~/wallpaper/current
+    # Usage: setup_user_configs <user>
+	su - "${1}" <<-EOF
+	# Generate Pywal cache for current wallpaper
+	wal -i ~/wallpapers/current
 
-    # Install vim-plug for Neovim
-    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-    # Install Neovim Plugins
-    nvim --headless +PlugInstall +qall
+	# Set wallpaper for lockscreen
+	betterlockscreen -u ~/wallpapers/current
+	
+	# Install vim-plug for Neovim
+	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	
+	# Install Neovim Plugins
+	nvim --headless +PlugInstall +qall
+	EOF
 }
 
 main() {
@@ -50,10 +56,8 @@ main() {
     install_yay $user $aur_pkgs
     setup_autologin $user
     setup_dotfiles $user $dotfiles_repo
+    setup_user_configs $user
     setup_network
-
-    export -f setup_user_configs
-    su $user -c "bash setup_user_configs"
 }
 
 main
