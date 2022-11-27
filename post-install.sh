@@ -37,7 +37,7 @@ setup_user_configs() {
 	su - "${1}" <<-EOF
 	# Generate Pywal cache for current wallpaper
 	wal -i ~/wallpapers/current
-
+	
 	# Set wallpaper for lockscreen
 	betterlockscreen -u ~/wallpapers/current
 	
