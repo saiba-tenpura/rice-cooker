@@ -2,11 +2,16 @@
 
 install_yay() {
     # Usage: install_yay <user> <aur_pkgs>
+    temp_sudo="/etc/sudoers.d/01_temp"
+    printf "${1} ALL=(ALL) NOPASSWD: ALL" > $temp_sudo
+
 	su - "${1}" <<-EOF
 	git clone https://aur.archlinux.org/yay.git ~/yay
 	(cd ~/yay; makepkg --noconfirm -si > /dev/null 2>&1; rm -rf ~/yay)
 	yay --noconfirm -S ${2} > /dev/null 2>&1
 	EOF
+
+    rm $temp_sudo
 }
 
 setup_autologin() {

@@ -9,7 +9,8 @@
     "custom-commands": [
         "curl -sO https://raw.githubusercontent.com/saiba-tenpura/rice-cooker/main/post-install.sh",
         "chmod 744 post-install.sh",
-        "./post-install.sh"
+        "./post-install.sh",
+        "rm post-install.sh"
     ],
     "debug": false,
     "desktop-environment": "i3",
