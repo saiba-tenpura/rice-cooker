@@ -20,7 +20,7 @@ setup_autologin() {
 	cat <<-EOF > /etc/systemd/system/getty@tty1.service.d/override.conf
 	[Service]
 	ExecStart=
-	ExecStart=-/usr/bin/agetty -a ${1} --noclear %I \$TERM
+	ExecStart=-/usr/bin/agetty -o '-p -f -- \\\\u' --noclear -a ${1} %I \$TERM
 	EOF
 }
 
@@ -42,9 +42,6 @@ setup_user_configs() {
 	su - "${1}" <<-EOF
 	# Generate Pywal cache for current wallpaper
 	wal -i ~/wallpapers/current
-	
-	# Set wallpaper for lockscreen
-	betterlockscreen -u ~/wallpapers/current
 	
 	# Install vim-plug for Neovim
 	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
