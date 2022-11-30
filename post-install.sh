@@ -43,6 +43,10 @@ setup_user_configs() {
 	# Generate Pywal cache for current wallpaper
 	wal -i ~/wallpapers/current
 	
+	# Setup additional fonts
+	mkdir -p ~/.local/share/fonts
+	cp -rf ~/fonts/* ~/.local/share/fonts
+	
 	# Install vim-plug for Neovim
 	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	
@@ -54,7 +58,7 @@ setup_user_configs() {
 main() {
     user="saiba"
     dotfiles_repo="https://github.com/saiba-tenpura/dotfiles"
-    aur_pkgs="betterlockscreen ttf-icomoon-feather"
+    aur_pkgs="betterlockscreen"
     install_yay $user $aur_pkgs
     setup_autologin $user
     setup_dotfiles $user $dotfiles_repo
