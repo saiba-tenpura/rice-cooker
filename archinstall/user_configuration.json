@@ -119,6 +119,7 @@
     "no_pkg_lookups": false,
     "offline": false,
     "packages": [
+        "calc",
         "dhcpcd",
         "dunst",
         "feh",
@@ -128,11 +129,13 @@
         "libnotify",
         "neovim",
         "picom",
+        "polkit",
         "polybar",
         "python-pywal",
         "rofi",
         "rxvt-unicode",
         "ttc-iosevka",
+        "ttf-dejavu",
         "xorg-xset"
     ],
     "profile": {
