@@ -136,7 +136,9 @@
         "rxvt-unicode",
         "ttc-iosevka",
         "ttf-dejavu",
-        "xorg-xset"
+        "xorg-xset",
+        "zathura",
+        "zathura-pdf-mupdf"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
