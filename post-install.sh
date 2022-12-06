@@ -57,6 +57,24 @@ setup_yay() {
     rm $temp_sudo
 }
 
+install_cpu_microcode() {
+    proc_type=$(lscpu)
+    if [[ $proc_type =~ "GenuineIntel" ]]; then
+        pacman -S --noconfirm --needed intel-ucode
+    elif [[ $proc_type =~ "AuthenticAMD" ]]; then
+        pacman -S --noconfirm --needed amd-ucode
+    fi
+}
+
+install_gpu_drivers() {
+    gpu_type=$(lspci)
+    if [[ $gpu_type =~ "NVIDIA|GeForce" ]]; then
+        pacman -S --noconfirm --needed nvidia nvidia-xconfig
+    elif [[ $gpu_type =~ "VGA.*(Radeon|AMD)" ]]; then
+        pacman -S --noconfirm --needed xf86-video-amdgpu
+    fi
+}
+
 main() {
     user="saiba"
     dotfiles_repo="https://github.com/saiba-tenpura/dotfiles"
