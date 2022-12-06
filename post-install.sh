@@ -19,8 +19,10 @@ setup_dotfiles() {
 	EOF
 }
 
-setup_network() {
-    systemctl enable dhcpcd > /dev/null
+setup_essential_services()
+{
+    systemctl enable cups.service
+    systemctl enable dhcpcd.service
 }
 
 setup_user_configs() {
@@ -64,7 +66,7 @@ main() {
     setup_autologin $user
     setup_dotfiles $user $dotfiles_repo
     setup_user_configs $user
-    setup_network
+    setup_essential_services
 }
 
 main
