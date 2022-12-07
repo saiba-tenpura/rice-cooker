@@ -160,6 +160,10 @@
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
     },
     "script": "guided",
+    "services": [
+        "cups",
+        "dhcpcd"
+    ],
     "silent": false,
     "swap": true,
     "timezone": "Europe/Berlin",
