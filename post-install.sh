@@ -17,8 +17,6 @@ install_base_dependencies()
 {
     install_rice_dependencies
     install_personal_software
-    install_cpu_microcode
-    install_gpu_drivers
 }
 
 install_rice_dependencies() {
