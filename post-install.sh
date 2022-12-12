@@ -16,12 +16,13 @@ main() {
 install_base_dependencies()
 {
     install_rice_dependencies
+    install_personal_software
     install_cpu_microcode
     install_gpu_drivers
 }
 
 install_rice_dependencies() {
-    pacman -S --noconfirm --needed calc dunst feh firefox i3-gaps libnotify neovim nnn papirus-icon-theme picom polkit polybar python-pywal rofi rxvt-unicode ttc-iosevka xorg-xset zathura zathura-pdf-mupdf
+    pacman -S --noconfirm --needed calc dunst feh i3-gaps libnotify neovim nnn papirus-icon-theme picom polkit polybar python-pywal rofi rxvt-unicode ttc-iosevka xorg-xset zathura zathura-pdf-mupdf
 }
 
 install_cpu_microcode() {
@@ -55,7 +56,7 @@ install_additional_software() {
 }
 
 install_administration_tools() {
-    pacman -S --noconfirm --needed cups htop openssh
+    pacman -S --noconfirm --needed htop openssh openvpn restic rsync virt-manager
 }
 
 install_wine() {
@@ -64,6 +65,10 @@ install_wine() {
 
 install_retroarch() {
     pacman -S --noconfirm --needed retroarch retroarch-assets-xmb
+}
+
+install_personal_software() {
+    pacman -S --noconfirm --needed firefox libreoffice lutris obsidian remmina signal-desktop steam thunderbird
 }
 
 setup_yay() {

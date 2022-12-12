@@ -121,11 +121,13 @@
     "packages": [
         "bash-completion",
         "binutils",
+        "cups",
         "dhcpcd",
         "dosfstools",
         "git",
         "gparted",
         "gptfdisk",
+        "gzip",
         "mesa",
         "ntfs-3g",
         "ntp",
