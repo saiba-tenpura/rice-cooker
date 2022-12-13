@@ -14,11 +14,13 @@
     ],
     "debug": false,
     "desktop-environment": "i3",
-    "gfx_driver": "All open-source (default)",
+    "gfx_driver": "AMD / ATI (open-source)",
     "harddrives": [
-        "/dev/vda"
+        "/dev/nvme0n1",
+        "/dev/sda",
+        "/dev/sdb"
     ],
-    "hostname": "rice-cooker",
+    "hostname": "archlinux",
     "kernels": [
         "linux"
     ],
