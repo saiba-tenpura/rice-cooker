@@ -54,7 +54,7 @@ install_additional_software() {
 }
 
 install_administration_tools() {
-    pacman -S --noconfirm --needed htop lm_senors openssh openvpn restic rsync udiskie udisks2 virt-manager
+    pacman -S --noconfirm --needed htop lm_sensors openssh openvpn restic rsync udiskie udisks2 virt-manager
 }
 
 install_wine() {
