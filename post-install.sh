@@ -51,6 +51,7 @@ install_additional_software() {
     install_administration_tools
     install_wine
     install_retroarch
+    setup_additional_services
 }
 
 install_administration_tools() {
@@ -66,7 +67,7 @@ install_retroarch() {
 }
 
 install_personal_software() {
-    pacman -S --noconfirm --needed firefox libreoffice lutris obsidian remmina signal-desktop steam thunderbird
+    pacman -S --noconfirm --needed bluez bluez-utils firefox libreoffice lutris obsidian remmina signal-desktop steam thunderbird
 }
 
 setup_yay() {
@@ -81,6 +82,10 @@ setup_yay() {
 	EOF
 
     rm $temp_sudo
+}
+
+setup_additional_services() {
+    systemctl enable bluetooth.service
 }
 
 setup_autologin() {
