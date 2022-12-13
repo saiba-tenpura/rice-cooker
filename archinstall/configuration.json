@@ -123,6 +123,7 @@
     "packages": [
         "bash-completion",
         "binutils",
+        "cronie",
         "cups",
         "dhcpcd",
         "dosfstools",
@@ -138,6 +139,7 @@
         "unrar",
         "unzip",
         "usbutils",
+        "xorg-xinput",
         "zip"
     ],
     "profile": {
@@ -145,6 +147,7 @@
     },
     "script": "guided",
     "services": [
+        "cronie",
         "cups",
         "dhcpcd"
     ],
