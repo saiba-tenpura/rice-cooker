@@ -3,7 +3,7 @@
 main() {
     user="saiba"
     dotfiles_repo="https://github.com/saiba-tenpura/dotfiles"
-    aur_pkgs="betterlockscreen"
+    aur_pkgs="betterlockscreen openvpn-update-resolv-conf-git"
 
     install_base_dependencies
     install_additional_software
@@ -20,7 +20,7 @@ install_base_dependencies()
 }
 
 install_rice_dependencies() {
-    pacman -S --noconfirm --needed calc dunst feh i3-gaps libnotify neovim nnn papirus-icon-theme picom polkit polybar python-pywal rofi rxvt-unicode ttc-iosevka xorg-xset zathura zathura-pdf-mupdf
+    pacman -S --noconfirm --needed calc dunst feh i3-gaps libnotify neovim nnn papirus-icon-theme picom polkit polybar python-pywal rofi rxvt-unicode ttc-iosevka xclip xorg-xset zathura zathura-pdf-mupdf
 }
 
 install_cpu_microcode() {
@@ -55,7 +55,7 @@ install_additional_software() {
 }
 
 install_administration_tools() {
-    pacman -S --noconfirm --needed htop lm_sensors openssh openvpn restic rsync udiskie udisks2 virt-manager
+    pacman -S --noconfirm --needed htop freerdp lm_sensors openssh openvpn pavucontrol remmina restic rsync udiskie udisks2 virt-manager
 }
 
 install_wine() {
@@ -67,7 +67,7 @@ install_retroarch() {
 }
 
 install_personal_software() {
-    pacman -S --noconfirm --needed bluez bluez-utils firefox libreoffice lutris obsidian remmina signal-desktop steam thunderbird
+    pacman -S --noconfirm --needed bluez bluez-utils firefox libreoffice lutris obsidian signal-desktop steam thunderbird
 }
 
 setup_yay() {
