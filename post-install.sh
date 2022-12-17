@@ -20,7 +20,7 @@ install_base_dependencies()
 }
 
 install_rice_dependencies() {
-    pacman -S --noconfirm --needed calc dunst feh i3-gaps libnotify neovim nnn papirus-icon-theme picom polkit polybar python-pywal rofi rxvt-unicode ttc-iosevka xclip xorg-xset zathura zathura-pdf-mupdf
+    pacman -S --noconfirm --needed calc dunst feh i3-gaps libnotify neovim nnn papirus-icon-theme picom polkit polybar python-pywal rofi rxvt-unicode sxiv ttc-iosevka xclip xorg-xset zathura zathura-pdf-mupdf
 }
 
 install_cpu_microcode() {
@@ -122,6 +122,9 @@ setup_user_configs() {
 	
 	# Install Neovim Plugins
 	nvim --headless +PlugInstall +qall
+
+	# Install NNN Plugins
+	sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs)"
 	EOF
 }
 
