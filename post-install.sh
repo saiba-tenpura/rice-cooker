@@ -3,7 +3,7 @@
 main() {
     user="saiba"
     dotfiles_repo="https://github.com/saiba-tenpura/dotfiles"
-    aur_pkgs="betterlockscreen openvpn-update-resolv-conf-git"
+    aur_pkgs="betterlockscreen openvpn-update-resolv-conf-git steam-screensaver-fix"
 
     install_base_dependencies
     install_additional_software
@@ -20,7 +20,7 @@ install_base_dependencies()
 }
 
 install_rice_dependencies() {
-    pacman -S --noconfirm --needed calc dunst feh i3-gaps libnotify neovim nnn papirus-icon-theme picom polkit polybar python-pywal rofi rxvt-unicode sxiv ttc-iosevka xclip xorg-xset zathura zathura-pdf-mupdf
+    pacman -S --noconfirm --needed calc dunst feh i3-gaps libnotify neovim nnn papirus-icon-theme picom polkit polybar python-pywal rofi rxvt-unicode sxiv ttc-iosevka xclip xorg-xset xss-lock zathura zathura-pdf-mupdf
 }
 
 install_cpu_microcode() {
