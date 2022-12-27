@@ -49,13 +49,32 @@ install_gpu_drivers() {
 
 install_additional_software() {
     install_administration_tools
-    install_wine
+    install_ge_proton
     install_retroarch
+    install_wine
     setup_additional_services
 }
 
 install_administration_tools() {
     pacman -S --noconfirm --needed htop freerdp lm_sensors openssh openvpn pavucontrol remmina restic rsync udiskie udisks2 virt-manager
+}
+
+install_ge_proton() {
+	su - ${user} <<-EOF
+	json=$(curl -s "https://api.github.com/repos/GloriousEggroll/proton-ge-custom/releases/latest")
+	[[ $json =~ .*(https.*\.tar\.gz).* ]] && url="${BASH_REMATCH[1]}"
+	filename="${url##*/}"
+	steam_dir=$HOME/.steam/root/compatibilitytools.d
+	mkdir -p "$steam_dir"
+	cd "$steam_dir"
+	curl -sLO "$url"
+	hash=$(curl -Lf ${url//.tar.gz/.sha512sum})
+	if printf '%s' "${hash%% *} ${filename}" | sha512sum -c -; then
+	    tar -xf "$filename"
+	fi
+
+	rm "$filename"
+	EOF
 }
 
 install_wine() {
