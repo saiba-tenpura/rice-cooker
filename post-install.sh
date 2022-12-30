@@ -87,7 +87,7 @@ install_retroarch() {
 }
 
 install_personal_software() {
-    pacman -S --noconfirm --needed bluez bluez-utils firefox libreoffice lutris obsidian signal-desktop steam thunderbird
+    pacman -S --noconfirm --needed bluez bluez-utils firefox libreoffice lutris obsidian sane signal-desktop simple-scan steam thunderbird
 }
 
 setup_yay() {
