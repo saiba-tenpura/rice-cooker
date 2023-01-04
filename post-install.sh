@@ -56,7 +56,7 @@ install_additional_software() {
 }
 
 install_administration_tools() {
-    pacman -S --noconfirm --needed bridge-utils dnsmasq htop freerdp lm_sensors openbsd-netcat openssh openvpn pavucontrol remmina restic rsync udiskie udisks2 qemu vde2 virt-manager
+    pacman -S --noconfirm --needed bridge-utils dnsmasq htop freerdp lm_sensors openbsd-netcat openssh openvpn pavucontrol remmina restic ripgrep rsync udiskie udisks2 qemu vde2 virt-manager
     usermod -a -G libvirt $user
 }
 
