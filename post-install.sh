@@ -20,7 +20,7 @@ install_base_dependencies()
 }
 
 install_rice_dependencies() {
-    pacman -S --noconfirm --needed calc dunst feh i3-gaps libnotify neovim nnn papirus-icon-theme picom polkit polybar python-pywal rofi rxvt-unicode sxiv ttc-iosevka xclip xorg-xset xss-lock zathura zathura-pdf-mupdf
+    pacman -S --noconfirm --needed calc dunst feh i3-gaps libnotify neovim nnn papirus-icon-theme picom polkit polybar python-pywal redshift rofi rxvt-unicode sxiv ttc-iosevka xclip xorg-xset xss-lock zathura zathura-pdf-mupdf
 }
 
 install_cpu_microcode() {
