@@ -143,9 +143,6 @@ setup_user_configs() {
 	
 	# Install Neovim Plugins
 	nvim --headless +PlugInstall +qall
-
-	# Install NNN Plugins
-	sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs)"
 	EOF
 }
 
