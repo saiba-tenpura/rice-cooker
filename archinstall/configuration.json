@@ -7,10 +7,9 @@
     "bootloader": "systemd-bootctl",
     "config_version": "2.5.1",
     "custom-commands": [
-        "curl -sO https://raw.githubusercontent.com/saiba-tenpura/rice-cooker/main/post-install.sh",
-        "chmod 744 post-install.sh",
-        "./post-install.sh",
-        "rm post-install.sh"
+        "git clone https://github.com/saiba-tenpura/rice-cooker",
+        "./rice-cooker/post-install.sh archinstall",
+        "rm -rf ./rice-cooker"
     ],
     "debug": false,
     "desktop-environment": "i3",
