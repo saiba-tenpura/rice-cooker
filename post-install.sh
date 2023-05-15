@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 main() {
-    CONFIG_DIR="$1"
-    SCRIPT_PATH="$(cd -- "$(dirname "$0")" >/dev/null 2>&1; pwd -P)"
+    config_dir="$1"
+    script_path="$(cd -- "$(dirname "$0")" >/dev/null 2>&1; pwd -P)"
+    packages=$(grep -s -v '^#' "${script_path}/${config_dir}/pkgs.txt")
+    aur_packages=$(grep -s -v '^#' "${script_path}/${config_dir}/aur-pkgs.txt")
     user="saiba"
     dotfiles_repo="https://github.com/saiba-tenpura/dotfiles"
-    aur_pkgs="betterlockscreen openvpn-update-resolv-conf-git steam-screensaver-fix"
 
-    install_packages
+    [[ -n "${packages}" ]] && install_packages
+    install_aur_packages
     install_ge_proton
     setup_yay $user $aur_pkgs
     setup_additional_services
@@ -17,8 +19,23 @@ main() {
 }
 
 install_packages() {
-    packages=$(grep -v '^#' "${SCRIPT_PATH}/${CONFIG_DIR}/pkgs.txt")
     pacman -S --noconfirm --needed $packages
+}
+
+install_aur_packages() {
+    temp_sudo="/etc/sudoers.d/01_temp"
+    echo "${user} ALL=(ALL) NOPASSWD: ALL" > $temp_sudo
+
+	su - "${user}" <<-EOF
+	if ! type yay > /dev/null 2>&1; then
+	    git clone https://aur.archlinux.org/yay.git ~/yay
+	    (cd ~/yay; makepkg --noconfirm -si > /dev/null 2>&1; rm -rf ~/yay)
+	fi
+
+	[[ -n "${aur_packages}" ]] && yay -S --noconfirm --needed $aur_packages
+	EOF
+
+    rm $temp_sudo
 }
 
 install_ge_proton() {

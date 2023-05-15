@@ -42,7 +42,7 @@ xss-lock
 zathura
 zathura-pdf-mupdf
 
-# Personal/Administration software
+# Administration/Personal software
 bluez
 bluez-utils
 bridge-utils
