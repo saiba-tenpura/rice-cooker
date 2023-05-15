@@ -2,22 +2,18 @@
 bash-completion
 binutils
 cronie
-cups
 dhcpcd
 dosfstools
 git
 gparted
 gptfdisk
 gzip
-mesa
 ntfs-3g
 ntp
 p7zip
-ttf-dejavu
 unrar
 unzip
 usbutils
-xorg-xinput
 zip
 
 # Rice dependencies
@@ -38,7 +34,9 @@ rofi
 rxvt-unicode
 sxiv
 ttc-iosevka
+ttf-dejavu
 xclip
+xorg-xinput
 xorg-xset
 xss-lock
 zathura
@@ -48,6 +46,7 @@ zathura-pdf-mupdf
 bluez
 bluez-utils
 bridge-utils
+cups
 dkms
 dnsmasq
 firefox

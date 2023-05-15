@@ -120,36 +120,12 @@
     "no_pkg_lookups": false,
     "offline": false,
     "packages": [
-        "bash-completion",
-        "binutils",
-        "cronie",
-        "cups",
-        "dhcpcd",
-        "dosfstools",
-        "git",
-        "gparted",
-        "gptfdisk",
-        "gzip",
-        "mesa",
-        "ntfs-3g",
-        "ntp",
-        "p7zip",
-        "ttf-dejavu",
-        "unrar",
-        "unzip",
-        "usbutils",
-        "xorg-xinput",
-        "zip"
+        "git"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
     },
     "script": "guided",
-    "services": [
-        "cronie",
-        "cups",
-        "dhcpcd"
-    ],
     "silent": false,
     "swap": true,
     "timezone": "Europe/Berlin",
