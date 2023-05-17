@@ -8,7 +8,7 @@
     "config_version": "2.5.1",
     "custom-commands": [
         "git clone https://github.com/saiba-tenpura/rice-cooker",
-        "./rice-cooker/post-install.sh archinstall",
+        "./rice-cooker/post-install.sh i3-desktop",
         "rm -rf ./rice-cooker"
     ],
     "debug": false,
