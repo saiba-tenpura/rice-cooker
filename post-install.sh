@@ -20,6 +20,10 @@ main() {
     install_dotfiles $user $dotfiles_url
     [[ -n "${services}" ]] && install_services $services
 
+    for group in ${groups}; do
+        usermod -a -G $group $user
+    done
+
     for func in ${user_setup}; do
         setup_$func $user
     done

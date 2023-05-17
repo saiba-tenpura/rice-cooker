@@ -2,7 +2,7 @@
 user="saiba"
 
 # Additional groups the user is added to
-groups="libvirt"
+groups=""
 
 # Repository of dotfiles which should be installed
 dotfiles_url="https://github.com/saiba-tenpura/dotfiles"
