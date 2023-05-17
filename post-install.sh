@@ -58,9 +58,9 @@ install_dotfiles() {
     local user=$1 url=$2
 
 	su - "${user}" <<-EOF
-	curl -sO "${repository/github/raw.githubusercontent}/master/install.sh"
+	curl -sO "${url/github/raw.githubusercontent}/master/install.sh"
 	chmod 744 install.sh
-	./install.sh ${repository}
+	./install.sh ${url}
 	EOF
 }
 
