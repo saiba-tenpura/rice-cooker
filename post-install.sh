@@ -20,7 +20,7 @@ main() {
     install_dotfiles $user $dotfiles_url
     [[ -n "${services}" ]] && install_services $services
 
-    for func in "${user_install}"; do
+    for func in ${user_setup}; do
         setup_$func $user
     done
 }
