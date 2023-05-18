@@ -1,0 +1,36 @@
+# Basic utilities
+bash-completion
+binutils
+cronie
+dhcpcd
+dosfstools
+git
+gparted
+gptfdisk
+gzip
+ntfs-3g
+ntp
+p7zip
+unrar
+unzip
+usbutils
+zip
+
+# Rice dependencies
+hyprland
+neovim
+nnn
+python-pywal
+
+# Administration/Personal software
+firefox
+htop
+libreoffice
+openssh
+openvpn
+rsync
+thunderbird
+
+# Laptop software
+tlp
+
