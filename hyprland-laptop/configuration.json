@@ -1,7 +1,10 @@
 {
+    "additional-repositories": [
+        "multilib"
+    ],
     "audio": "pipewire",
     "config_version": "2.5.5",
-    "custom-commands":[
+    "custom-commands": [
         "git clone https://github.com/saiba-tenpura/rice-cooker",
         "./rice-cooker/post-install.sh hyprland-laptop",
         "rm -rf ./rice-cooker"
@@ -10,28 +13,13 @@
     "desktop-environment": "sway",
     "disk_encryption": {
         "encryption_type": "partition",
-        "partitions": {
-            "/dev/vda": [
-                {
-                    "filesystem": {
-                        "format": "ext4"
-                    },
-                    "mountpoint": "/",
-                    "size": "20.0GB",
-                    "start": "512MB",
-                    "type": "primary",
-                    "wipe": true
-                }
-            ]
-        }
+        "partitions": {}
     },
     "gfx_driver": "All open-source (default)",
     "harddrives": [
         "/dev/vda"
     ],
-    "kernels": [
-        "linux"
-    ],
+    "hostname": "waytop",
     "keyboard-layout": "de-latin1",
     "mirror-region": {
         "Germany": {
@@ -76,7 +64,6 @@
             "http://mirrors.n-ix.net/archlinux/$repo/os/$arch": true,
             "http://mirrors.niyawe.de/archlinux/$repo/os/$arch": true,
             "http://mirrors.xtom.de/archlinux/$repo/os/$arch": true,
-            "http://os.codefionn.eu/archlinux/$repo/os/$arch": true,
             "http://packages.oth-regensburg.de/archlinux/$repo/os/$arch": true,
             "https://appuals.com/archlinux/$repo/os/$arch": true,
             "https://arch.jensgutermuth.de/$repo/os/$arch": true,
@@ -84,6 +71,7 @@
             "https://arch.phinau.de/$repo/os/$arch": true,
             "https://arch.unixpeople.org/$repo/os/$arch": true,
             "https://archlinux.homeinfo.de/$repo/os/$arch": true,
+            "https://archlinux.richard-neumann.de/$repo/os/$arch": true,
             "https://archlinux.thaller.ws/$repo/os/$arch": true,
             "https://de.arch.mirror.kescher.at/$repo/os/$arch": true,
             "https://dist-mirror.fem.tu-ilmenau.de/archlinux/$repo/os/$arch": true,
@@ -116,14 +104,15 @@
             "https://mirrors.n-ix.net/archlinux/$repo/os/$arch": true,
             "https://mirrors.niyawe.de/archlinux/$repo/os/$arch": true,
             "https://mirrors.xtom.de/archlinux/$repo/os/$arch": true,
-            "https://os.codefionn.eu/archlinux/$repo/os/$arch": true,
             "https://packages.oth-regensburg.de/archlinux/$repo/os/$arch": true,
             "https://pkg.fef.moe/archlinux/$repo/os/$arch": true
         }
     },
-    "nic": null,
     "no_pkg_lookups": false,
     "offline": false,
+    "packages": [
+        "git"
+    ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/desktop.py"
     },
