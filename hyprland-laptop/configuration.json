@@ -7,7 +7,7 @@
     "config_version": "2.5.5",
     "custom-commands": [
         "git clone https://github.com/saiba-tenpura/rice-cooker",
-        "./rice-cooker/post-install.sh hyprland-laptop",
+        "./rice-cooker/post-install.sh hyprland-laptop > /var/log/rice-cooker.log 2>&1",
         "rm -rf ./rice-cooker"
     ],
     "debug": false,

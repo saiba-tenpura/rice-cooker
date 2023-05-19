@@ -42,7 +42,7 @@ install_aur_packages() {
     echo "${user} ALL=(ALL) NOPASSWD: ALL" > $temp_sudo
 
 	su - "${user}" <<-EOF
-	if ! type -p yay &>/dev/null; then
+	if ! type -p yay > /dev/null 2>&1; then
 	    git clone https://aur.archlinux.org/yay.git ~/yay
 	    (cd ~/yay; makepkg --noconfirm -si > /dev/null 2>&1; rm -rf ~/yay)
 	fi
