@@ -17,7 +17,9 @@ usbutils
 zip
 
 # Rice dependencies
+dunst
 hyprland
+kitty
 neovim
 nnn
 python-pywal
@@ -28,8 +30,10 @@ htop
 libreoffice
 openssh
 openvpn
+pavucontrol
 rsync
 thunderbird
+zathura
 
 # Laptop software
 tlp
