@@ -8,7 +8,7 @@ groups=""
 dotfiles_url="https://github.com/saiba-tenpura/dotfiles"
 
 # systemd services to enable by default
-services="dhcpcd tlp"
+services="dhcpcd sddm tlp"
 
 # Optional user setup steps to include
 # 
