@@ -106,6 +106,18 @@ setup_xautologin() {
 	EOF
 }
 
+setup_hyprland_autologin() {
+    # Usage: setup_hyprland_autologin "user"
+    local user=$1
+
+    mkdir -p /etc/sddm.conf.d/
+	cat <<-EOF > /etc/sddm.conf.d/autologin.conf
+	[Autologin]
+	User=${user}
+	Session=hyprland
+	EOF
+}
+
 setup_user_configs() {
     # Usage: setup_user_configs "user"
     local user=$1

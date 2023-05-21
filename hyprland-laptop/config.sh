@@ -16,5 +16,5 @@ services="dhcpcd sddm tlp"
 # ge_proton    - Install the latest GE Proton
 # user_configs - Initialise user setup
 # xautologin   - Setup autologin for Xorg Server
-user_setup="user_configs"
+user_setup="hyprland_autologin user_configs"
 
