@@ -124,7 +124,7 @@ setup_user_configs() {
 
 	su - "${user}" <<-EOF
 	# Generate Pywal cache for current wallpaper
-	wal -i ~/wallpapers/current
+	wal -i ~/wallpapers/current.png
 	
 	# Setup additional fonts
 	mkdir -p ~/.local/share/fonts

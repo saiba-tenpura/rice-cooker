@@ -19,6 +19,7 @@ zip
 # Rice dependencies
 dunst
 hyprland
+hyprpaper
 kitty
 neovim
 nnn
@@ -33,6 +34,7 @@ openvpn
 pavucontrol
 rsync
 thunderbird
+ttc-iosevka
 zathura
 
 # Laptop software
