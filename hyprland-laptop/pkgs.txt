@@ -8,6 +8,7 @@ git
 gparted
 gptfdisk
 gzip
+man-db
 ntfs-3g
 ntp
 p7zip
@@ -24,6 +25,9 @@ kitty
 neovim
 nnn
 python-pywal
+swayidle
+swaylock-effects
+waybar
 
 # Administration/Personal software
 firefox

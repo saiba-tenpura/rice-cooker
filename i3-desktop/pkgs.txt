@@ -8,6 +8,7 @@ git
 gparted
 gptfdisk
 gzip
+man-db
 ntfs-3g
 ntp
 p7zip
