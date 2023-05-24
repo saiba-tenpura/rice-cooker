@@ -9,6 +9,7 @@ gparted
 gptfdisk
 gzip
 man-db
+noto-fonts-emoji
 ntfs-3g
 ntp
 p7zip
@@ -28,6 +29,7 @@ python-pywal
 swayidle
 swaylock-effects
 waybar
+xdg-desktop-portal-hyprland
 
 # Administration/Personal software
 firefox

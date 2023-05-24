@@ -9,6 +9,7 @@ gparted
 gptfdisk
 gzip
 man-db
+noto-fonts-emoji
 ntfs-3g
 ntp
 p7zip
