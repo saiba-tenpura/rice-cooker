@@ -1,5 +1,7 @@
 # Rice dependencies
 sddm-git
+waybar-hyprland-git
+wlogout
 
 # Administration/Personal software
 openvpn-update-resolv-conf-git

@@ -25,10 +25,11 @@ hyprpaper
 kitty
 neovim
 nnn
+otf-font-awesome
+pavucontrol
 python-pywal
 swayidle
 swaylock-effects
-waybar
 xdg-desktop-portal-hyprland
 
 # Administration/Personal software
@@ -37,7 +38,6 @@ htop
 libreoffice
 openssh
 openvpn
-pavucontrol
 rsync
 thunderbird
 ttc-iosevka
