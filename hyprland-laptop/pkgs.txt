@@ -30,6 +30,8 @@ python-pywal
 swayidle
 swaylock-effects
 ttc-iosevkaterm-nerd
+wlogout
+wofi
 xdg-desktop-portal-hyprland
 
 # Administration/Personal software
