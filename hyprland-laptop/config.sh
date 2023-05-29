@@ -8,7 +8,7 @@ groups=""
 dotfiles_url="https://github.com/saiba-tenpura/dotfiles"
 
 # systemd services to enable by default
-services="dhcpcd sddm tlp"
+services="dhcpcd tlp"
 
 # Optional user setup steps to include
 # 
@@ -16,5 +16,5 @@ services="dhcpcd sddm tlp"
 # ge_proton    - Install the latest GE Proton
 # user_configs - Initialise user setup
 # xautologin   - Setup autologin for Xorg Server
-user_setup="hyprland_autologin user_configs"
+user_setup="user_configs wayland_autologin"
 

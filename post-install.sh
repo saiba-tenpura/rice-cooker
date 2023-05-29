@@ -94,27 +94,30 @@ setup_ge_proton() {
 	EOF
 }
 
-setup_xautologin() {
+setup_x11_autologin() {
     # Usage: setup_xautologin "user"
     local user=$1
+
+    setup_autologin $user "x11"
+}
+
+setup_wayland_autologin() {
+    # Usage: setup_hyprland_autologin "user"
+    local user=$1
+
+    setup_autologin $user "wayland"
+}
+
+setup_autologin() {
+    # Usage: setup_hyprland_autologin "user"
+    local user=$1 type=$2
 
     mkdir -p /etc/systemd/system/getty@tty1.service.d
 	cat <<-EOF > /etc/systemd/system/getty@tty1.service.d/override.conf
 	[Service]
+	Environment=XDG_SESSION_TYPE=${type}
 	ExecStart=
 	ExecStart=-/usr/bin/agetty -o '-p -f -- \\\\u' --noclear -a ${user} %I \$TERM
-	EOF
-}
-
-setup_hyprland_autologin() {
-    # Usage: setup_hyprland_autologin "user"
-    local user=$1
-
-    mkdir -p /etc/sddm.conf.d/
-	cat <<-EOF > /etc/sddm.conf.d/autologin.conf
-	[Autologin]
-	User=${user}
-	Session=hyprland
 	EOF
 }
 

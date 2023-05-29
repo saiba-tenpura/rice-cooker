@@ -16,5 +16,5 @@ services="bluetooth cronie cups dhcpcd libvirtd"
 # ge_proton    - Install the latest GE Proton
 # user_configs - Initialise user setup
 # xautologin   - Setup autologin for Xorg Server
-user_setup="ge_proton user_configs xautologin"
+user_setup="ge_proton user_configs x11_autologin"
 

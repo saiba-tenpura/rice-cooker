@@ -1,5 +1,4 @@
 # Rice dependencies
-sddm-git
 waybar-hyprland-git
 wlogout
 
