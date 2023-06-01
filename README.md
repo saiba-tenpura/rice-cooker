@@ -1,10 +1,13 @@
 # Rice Cooker
 Automated setup of a riced Arch Linux installation.
 
-## Execution
-To run the installation just define variable for where the configuration files are stored in the repository and then run archinstall with it as parameters.
+## Installation
+Perform a basic archinstall with the Xorg (i3) or Sway for (Hyprland) profile depending on which rice you would like to install. After archinstall has finished drop into the chroot and clone the repository and execute the matching script.
 ```
-#> repo_url="https://raw.githubusercontent.com/saiba-tenpura/rice-cooker/main/i3-desktop"
-#> archinstall --config "${repo_url}/configuration.json"
+#> archinstall
+#> ..
+#> git clone https://github.com/saiba-tenpura/rice-cooker
+#> ./rice-cooker/post-install.sh i3-desktop
+#> rm -rf ./rice-cooker
 ```
 
