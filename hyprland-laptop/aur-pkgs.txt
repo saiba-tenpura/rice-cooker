@@ -1,9 +1,0 @@
-# Rice dependencies
-clipman
-swaylock-effects
-waybar-hyprland-git
-wlogout
-
-# Administration/Personal software
-openvpn-update-resolv-conf-git
-

@@ -19,6 +19,7 @@ usbutils
 zip
 
 # Rice dependencies
+clipman
 dunst
 hyprland
 hyprpaper
@@ -28,7 +29,10 @@ nnn
 pavucontrol
 python-pywal
 swayidle
+swaylock-effects
 ttf-iosevkaterm-nerd
+waybar-hyprland-git
+wlogout
 wofi
 xdg-desktop-portal-hyprland
 
@@ -38,6 +42,7 @@ htop
 libreoffice
 openssh
 openvpn
+openvpn-update-resolv-conf-git
 rsync
 thunderbird
 zathura

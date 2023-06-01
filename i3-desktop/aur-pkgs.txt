@@ -1,6 +1,0 @@
-# Rice dependencies
-betterlockscreen
-
-# Administration/Personal software
-openvpn-update-resolv-conf-git
-steam-screensaver-fix

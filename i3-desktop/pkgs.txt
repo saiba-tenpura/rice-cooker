@@ -19,6 +19,7 @@ usbutils
 zip
 
 # Rice dependencies
+betterlockscreen
 calc
 dunst
 feh
@@ -126,7 +127,9 @@ mpg123
 ncurses
 openal
 opencl-icd-loader
+openvpn-update-resolv-conf-git
 sqlite
+steam-screensaver-fix
 v4l-utils
 vulkan-icd-loader
 wine-staging

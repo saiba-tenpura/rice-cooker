@@ -11,12 +11,10 @@ main() {
     fi
 
     source "${setup_dir}/config.sh" 
+    [[ -n "${conflicting}" ]] && pacman -R --noconfirm $conflicting
+
     packages=$(grep -s -v '^#' "${setup_dir}/pkgs.txt")
-    aur_packages=$(grep -s -v '^#' "${setup_dir}/aur-pkgs.txt")
-
-    [[ -n "${packages}" ]] && install_packages $packages
-    install_aur_packages $user $aur_packages
-
+    install_packages $user $packages
     install_dotfiles $user $dotfiles_url
     [[ -n "${services}" ]] && install_services $services
 
@@ -30,11 +28,6 @@ main() {
 }
 
 install_packages() {
-    # Usage: install_packages "packages"
-    pacman -S --noconfirm --needed $@
-}
-
-install_aur_packages() {
     # Usage: install_aur_packages "user" "packages"
     local user=$1 packages="${@:2}" temp_sudo
 
@@ -59,7 +52,7 @@ install_dotfiles() {
 
 	su - "${user}" <<-EOF
 	curl -sO "${url/github/raw.githubusercontent}/master/install.sh"
-	chmod 744 install.sh
+	chmod 740 install.sh
 	./install.sh ${url}
 	EOF
 }
