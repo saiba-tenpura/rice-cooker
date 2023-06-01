@@ -1,4 +1,5 @@
 # Rice dependencies
+clipman
 waybar-hyprland-git
 wlogout
 
