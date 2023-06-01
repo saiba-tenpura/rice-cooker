@@ -28,9 +28,7 @@ nnn
 pavucontrol
 python-pywal
 swayidle
-swaylock-effects
-ttc-iosevkaterm-nerd
-wlogout
+ttf-iosevkaterm-nerd
 wofi
 xdg-desktop-portal-hyprland
 
