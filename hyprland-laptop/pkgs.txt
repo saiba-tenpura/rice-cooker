@@ -37,6 +37,7 @@ wofi
 xdg-desktop-portal-hyprland
 
 # Administration/Personal software
+brightnessctl
 firefox
 htop
 libreoffice
@@ -45,6 +46,7 @@ openvpn
 openvpn-update-resolv-conf-git
 rsync
 thunderbird
+udiskie
 zathura
 
 # Laptop software
