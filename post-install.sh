@@ -126,11 +126,8 @@ setup_user_configs() {
 	mkdir -p ~/.local/share/fonts
 	cp -rf ~/fonts/* ~/.local/share/fonts
 	
-	# Install vim-plug for Neovim
-	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	
-	# Install Neovim Plugins
-	nvim --headless +PlugInstall +qall
+	# Setup Neovim plugins
+	nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 	EOF
 }
 
