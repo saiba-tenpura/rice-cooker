@@ -36,7 +36,7 @@ redshift
 rofi
 rxvt-unicode
 sxiv
-ttc-iosevka
+ttf-iosevkaterm-nerd
 ttf-dejavu
 xclip
 xorg-xinput
