@@ -1,19 +1,21 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 main() {
     # Usage: main "setup_name"
-    setup_name="$1"
-    script_path="$(cd -- "$(dirname "$0")" >/dev/null 2>&1; pwd -P)"
-    setup_dir="${script_path}/${setup_name}"
+    local setup_name="$1"
+    local script_path="$(cd -- "$(dirname "$0")" >/dev/null 2>&1; pwd -P)"
+    local setup_dir="${script_path}/${setup_name}"
     if [[ ! -f "${setup_dir}/config.sh" ]]; then
         printf "Configuration files does not exist."
         exit 2
     fi
 
-    source "${setup_dir}/config.sh" 
-    [[ -n "${conflicting}" ]] && pacman -R --noconfirm $conflicting
+    source "${setup_dir}/config.sh"
+    [[ -n "${conflicting}" ]] && pacman -R --noconfirm $conflicting || true
 
-    packages=$(grep -s -v '^#' "${setup_dir}/pkgs.txt")
+    local packages="$(grep -s -v '^#' "${setup_dir}/pkgs.txt")"
     install_packages $user $packages
     install_dotfiles $user $dotfiles_url
     [[ -n "${services}" ]] && install_services $services
@@ -28,14 +30,16 @@ main() {
 }
 
 install_packages() {
-    # Usage: install_aur_packages "user" "packages"
-    local user=$1 packages="${@:2}" temp_sudo
+    # Usage: install_packages "user" "packages"
+    local user="$1"
+    local packages="${@:2}"
 
-    temp_sudo="/etc/sudoers.d/01_temp"
-    echo "${user} ALL=(ALL) NOPASSWD: ALL" > $temp_sudo
+    local temp_sudo="/etc/sudoers.d/01_temp"
+    echo "${user} ALL=(ALL) NOPASSWD: ALL" > "$temp_sudo"
 
 	su - "${user}" <<-EOF
 	if ! type -p yay > /dev/null 2>&1; then
+	    sudo pacman -S --needed git base-devel
 	    git clone https://aur.archlinux.org/yay.git ~/yay
 	    (cd ~/yay; makepkg --noconfirm -si > /dev/null 2>&1; rm -rf ~/yay)
 	fi
@@ -48,7 +52,8 @@ install_packages() {
 
 install_dotfiles() {
     # Usage: setup_dotfiles "user" "url"
-    local user=$1 url=$2
+    local user="$1"
+    local url="$2"
 
 	su - "${user}" <<-EOF
 	curl -sO "${url/github/raw.githubusercontent}/master/install.sh"
@@ -89,21 +94,22 @@ setup_ge_proton() {
 
 setup_x11_autologin() {
     # Usage: setup_xautologin "user"
-    local user=$1
+    local user="$1"
 
     setup_autologin $user "x11"
 }
 
 setup_wayland_autologin() {
     # Usage: setup_hyprland_autologin "user"
-    local user=$1
+    local user="$1"
 
-    setup_autologin $user "wayland"
+    setup_autologin "$user" "wayland"
 }
 
 setup_autologin() {
     # Usage: setup_hyprland_autologin "user"
-    local user=$1 type=$2
+    local user="$1"
+    local type="$2"
 
     mkdir -p /etc/systemd/system/getty@tty1.service.d
 	cat <<-EOF > /etc/systemd/system/getty@tty1.service.d/override.conf
@@ -116,7 +122,7 @@ setup_autologin() {
 
 setup_user_configs() {
     # Usage: setup_user_configs "user"
-    local user=$1
+    local user="$1"
 
 	su - "${user}" <<-EOF
 	# Generate Pywal cache for current wallpaper
