@@ -15,7 +15,7 @@ main() {
     source "${setup_dir}/config.sh"
     [[ -n "${conflicting}" ]] && pacman -R --noconfirm $conflicting || true
 
-    local packages="$(grep -s -v '^#' "${setup_dir}/pkgs.txt")"
+    local packages=$(grep -s -v '^#' "${setup_dir}/pkgs.txt")
     install_packages $user $packages
     install_dotfiles $user $dotfiles_url
     [[ -n "${services}" ]] && install_services $services
@@ -39,7 +39,7 @@ install_packages() {
 
 	su - "${user}" <<-EOF
 	if ! type -p yay > /dev/null 2>&1; then
-	    sudo pacman -S --needed git base-devel
+	    sudo pacman -S --noconfirm --needed git base-devel
 	    git clone https://aur.archlinux.org/yay.git ~/yay
 	    (cd ~/yay; makepkg --noconfirm -si > /dev/null 2>&1; rm -rf ~/yay)
 	fi
@@ -136,5 +136,10 @@ setup_user_configs() {
 	nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 	EOF
 }
+
+if [ -z "${1+x}" ]; then
+  echo "Missing required type parameter!"
+  exit 1
+fi
 
 main "$1"
