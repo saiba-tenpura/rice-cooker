@@ -2,7 +2,6 @@
 bash-completion
 binutils
 cronie
-dhcpcd
 dosfstools
 git
 gparted
@@ -12,6 +11,7 @@ man-db
 noto-fonts-emoji
 ntfs-3g
 ntp
+pacman-contrib
 p7zip
 unrar
 unzip
@@ -19,35 +19,38 @@ usbutils
 zip
 
 # Rice dependencies
-clipman
 dunst
+ghostty
 hyprland
 hyprpaper
-kitty
 neovim
-nnn
+npm
 pavucontrol
 python-pywal
 swayidle
-swaylock-effects
-ttf-iosevkaterm-nerd
-waybar-hyprland-git
+waybar
 wlogout
 wofi
 xdg-desktop-portal-hyprland
+yazi
+zathura
+zathura-pdf-mupdf
+
+# AUR
+swaylock-effects
 
 # Administration/Personal software
-brightnessctl
 firefox
 htop
 libreoffice
+nsxiv
 openssh
 openvpn
 openvpn-update-resolv-conf-git
+restic
 rsync
 thunderbird
 udiskie
-zathura
 
 # Laptop software
 tlp

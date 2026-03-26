@@ -20,28 +20,26 @@ zip
 
 # Rice dependencies
 betterlockscreen
-calc
 dunst
 feh
+ghostty
 i3-wm
 libnotify
 neovim
-nnn
 papirus-icon-theme
 picom
 polkit
 polybar
 python-pywal
+neovim
+npm
 redshift
 rofi
-rxvt-unicode
-sxiv
-ttf-iosevkaterm-nerd
-ttf-dejavu
 xclip
 xorg-xinput
 xorg-xset
 xss-lock
+yazi
 zathura
 zathura-pdf-mupdf
 
@@ -59,6 +57,7 @@ libreoffice
 linux-headers
 lm_sensors
 lutris
+nsxiv
 obs-studio
 obsidian
 openbsd-netcat
@@ -124,13 +123,7 @@ libxcomposite
 libxinerama
 libxslt
 mpg123
-ncurses
-openal
-opencl-icd-loader
 openvpn-update-resolv-conf-git
-sqlite
-steam-screensaver-fix
-v4l-utils
 vulkan-icd-loader
 wine-staging
 
