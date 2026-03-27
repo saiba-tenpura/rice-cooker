@@ -1,0 +1,54 @@
+# Basic utilities
+bash-completion
+binutils
+cronie
+dosfstools
+git
+gparted
+gptfdisk
+gzip
+man-db
+noto-fonts-emoji
+ntfs-3g
+ntp
+pacman-contrib
+p7zip
+unrar
+unzip
+usbutils
+zip
+
+# Rice dependencies
+dunst
+ghostty
+hyprland
+hyprpaper
+neovim
+npm
+pavucontrol
+python-pywal
+swayidle
+waybar
+wlogout
+wofi
+xdg-desktop-portal-hyprland
+yazi
+zathura
+zathura-pdf-mupdf
+
+# AUR
+swaylock-effects
+
+# Administration/Personal software
+firefox
+htop
+libreoffice
+nsxiv
+openssh
+openvpn
+openvpn-update-resolv-conf-git
+restic
+rsync
+thunderbird
+udiskie
+
