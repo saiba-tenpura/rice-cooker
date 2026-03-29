@@ -127,13 +127,6 @@ setup_user_configs() {
 	su - "${user}" <<-EOF
 	# Generate Pywal cache for current wallpaper
 	wal -i ~/wallpapers/current.png
-	
-	# Setup additional fonts
-	mkdir -p ~/.local/share/fonts
-	cp -rf ~/fonts/* ~/.local/share/fonts
-	
-	# Setup Neovim plugins
-	nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 	EOF
 }
 
