@@ -9,7 +9,6 @@ gparted
 gptfdisk
 gzip
 man-db
-noto-fonts-emoji
 ntfs-3g
 ntp
 p7zip
@@ -35,6 +34,7 @@ neovim
 npm
 redshift
 rofi
+ttf-noto-nerd
 xclip
 xorg-xinput
 xorg-xset

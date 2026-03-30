@@ -8,7 +8,6 @@ gparted
 gptfdisk
 gzip
 man-db
-noto-fonts-emoji
 ntfs-3g
 ntp
 pacman-contrib
@@ -28,6 +27,7 @@ npm
 pavucontrol
 python-pywal
 swayidle
+ttf-noto-nerd
 waybar
 wlogout
 wofi
