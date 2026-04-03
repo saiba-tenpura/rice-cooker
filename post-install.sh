@@ -130,6 +130,16 @@ setup_user_configs() {
 	EOF
 }
 
+setup_x11_fonts() {
+    # Usage: setup_x11_fonts "user"
+    local user="$1"
+
+	su - "${user}" <<-EOF
+	mkdir -p ~/.local/share/fonts
+	cp -rf ~/fonts/* ~/.local/share/fonts
+	EOF
+}
+
 if [ -z "${1+x}" ]; then
   echo "Missing required type parameter!"
   exit 1

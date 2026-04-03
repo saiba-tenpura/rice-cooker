@@ -19,6 +19,7 @@ services=""
 # ge_proton         - Install the latest GE Proton
 # user_configs      - Initialise user setup
 # x11_autologin     - Setup autologin for Xorg Server
+# x11_fonts         - Setup additional Xorg fonts
 # wayland_autologin - Setup autologin for Wayland
 user_setup="user_configs wayland_autologin"
 
