@@ -40,15 +40,22 @@ zathura-pdf-mupdf
 swaylock-effects
 
 # Administration/Personal software
+bluez
+bluez-utils
+chromium
 firefox
+gimp
 htop
+inkscape
 libreoffice
 nsxiv
 openssh
 openvpn
 openvpn-update-resolv-conf-git
 restic
+ripgrep
 rsync
 thunderbird
 udiskie
+udisks2
 
