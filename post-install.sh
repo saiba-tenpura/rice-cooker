@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -euox pipefail
 
 main() {
     # Usage: main "setup_name"
@@ -116,7 +116,7 @@ setup_autologin() {
 	[Service]
 	Environment=XDG_SESSION_TYPE=${type}
 	ExecStart=
-	ExecStart=-/usr/bin/agetty -o '-p -f -- \\\\u' --noclear -a ${user} %I \$TERM
+	ExecStart=-/usr/bin/agetty --noreset --noclear --autologin ${user} - \$TERM
 	EOF
 }
 
