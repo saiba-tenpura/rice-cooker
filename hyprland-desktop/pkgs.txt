@@ -17,6 +17,13 @@ unzip
 usbutils
 zip
 
+# Drivers
+amducode
+lib32-mesa
+lib32-vulkan-radeon
+mesa
+vulkan-radeon
+
 # Rice dependencies
 dunst
 ghostty
@@ -24,7 +31,6 @@ hyprland
 hyprpaper
 neovim
 npm
-pavucontrol
 python-pywal
 swayidle
 ttf-noto-nerd
@@ -43,6 +49,7 @@ swaylock-effects
 bluez
 bluez-utils
 chromium
+discord
 firefox
 gimp
 htop
@@ -52,9 +59,15 @@ nsxiv
 openssh
 openvpn
 openvpn-update-resolv-conf-git
+pass
+pavucontrol
+pipewire
+pipewire-pulse
+wireplumber
 restic
 ripgrep
 rsync
+steam
 thunderbird
 udiskie
 udisks2
