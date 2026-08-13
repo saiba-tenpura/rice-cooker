@@ -7,6 +7,7 @@ git
 gparted
 gptfdisk
 gzip
+lzip
 man-db
 ntfs-3g
 ntp
@@ -27,17 +28,21 @@ vulkan-radeon
 # Rice dependencies
 dunst
 ghostty
+grim
 hyprland
 hyprpaper
 neovim
 npm
 python-pywal
+slurp
 swayidle
 ttf-noto-nerd
 waybar
+wl-clipboard
 wlogout
 wofi
 xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
 yazi
 zathura
 zathura-pdf-mupdf
@@ -55,6 +60,10 @@ gimp
 htop
 inkscape
 libreoffice
+lm_sensors
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
 nsxiv
 openssh
 openvpn
@@ -67,8 +76,12 @@ wireplumber
 restic
 ripgrep
 rsync
+sshfs
 steam
 thunderbird
+ttf-dejavu
+ttf-liberation
+ttf-roboto
 udiskie
 udisks2
 
