@@ -48,14 +48,18 @@ zathura
 zathura-pdf-mupdf
 
 # AUR
+epson-inkjet-printer-escpr2
 swaylock-effects
 
 # Administration/Personal software
+avahi
 bluez
 bluez-utils
 chromium
+cups
 discord
 firefox
+ghostscript
 gimp
 htop
 inkscape
@@ -76,6 +80,7 @@ wireplumber
 restic
 ripgrep
 rsync
+simple-scan
 sshfs
 steam
 thunderbird

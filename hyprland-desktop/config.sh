@@ -11,7 +11,7 @@ dotfiles_url="https://github.com/saiba-tenpura/dotfiles"
 conflicting="swaylock"
 
 # systemd services to enable by default
-services="cronie bluetooth fancontrol"
+services="avahi-daemon cronie cups bluetooth fancontrol"
 
 # Optional user setup steps to include
 #
