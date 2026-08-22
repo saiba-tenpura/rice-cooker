@@ -33,7 +33,6 @@ hyprland
 hyprpaper
 neovim
 npm
-python-pywal
 slurp
 swayidle
 ttf-noto-nerd
@@ -50,6 +49,7 @@ zathura-pdf-mupdf
 # AUR
 epson-inkjet-printer-escpr2
 swaylock-effects
+python-pywal16
 
 # Administration/Personal software
 avahi

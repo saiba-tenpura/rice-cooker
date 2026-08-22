@@ -126,7 +126,7 @@ setup_user_configs() {
 
 	su - "${user}" <<-EOF
 	# Generate Pywal cache for current wallpaper
-	wal -i ~/wallpapers/current.png
+	wal -i ~/wallpapers/current.png -q -t -o ~/.config/wal/done.sh
 	EOF
 }
 
